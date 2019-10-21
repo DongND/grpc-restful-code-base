@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package customer;
+
+option java_package = "com.act.infinity.customer.grpc";
+option java_multiple_files = true;
+
+message Customer {
+  int32 id = 1;
+  string name = 2;
+}
+message CreateCustomerRequest {
+  Customer request = 1;
+}
+
+message CreateCustomerResponse {
+  Customer response = 1;
+}
+
+service CustomerService {
+  rpc CreateCustomer(CreateCustomerRequest) returns (CreateCustomerResponse) {};
+}
