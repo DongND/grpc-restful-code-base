@@ -1,13 +1,11 @@
 package com.act.infinity.customer.mapper;
 
-import com.act.infinity.customer.grpc.CreateCustomerRequest;
-import com.act.infinity.customer.entity.bo.CustomerBO;
-import com.act.infinity.customer.entity.bo.OrderBO;
 import com.act.infinity.customer.dto.CustomerDTO;
 import com.act.infinity.customer.dto.OrderDTO;
-import org.mapstruct.Mapper;
+import com.act.infinity.customer.entity.bo.CustomerBO;
+import com.act.infinity.customer.entity.bo.OrderBO;
+import com.act.infinity.customer.grpc.CreateCustomerRequest;
 
-@Mapper
 public interface RequestConverter {
 
   CustomerBO createBO(CreateCustomerRequest obj);
